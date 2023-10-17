@@ -39,6 +39,8 @@ source .zshrc
 
 source .p10k.zsh
 
+chsh -s $(which zsh)
+
 exec zsh
 
 rm -rf .dotfiles
