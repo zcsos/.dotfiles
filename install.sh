@@ -34,11 +34,6 @@ cp ~/.dotfiles/.tmux.conf ~
 
 cp -r ~/.dotfiles/.config ~
 
-# 更新配置
-# source .zshrc
-
-# source .p10k.zsh
-
 # 删除.dotfiles
 rm -rf ~/.dotfiles/
 
