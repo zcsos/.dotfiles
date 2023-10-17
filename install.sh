@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # 安装所需软件
-sudo apt update
-sudo apt install -y zsh tmux make cmake gettext g++ npm
+apt update
+echo "y" | apt install -y zsh tmux make cmake gettext g++ npm
 
 # 安装oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+echo "y" | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # 克隆powerlevel10k主题
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
@@ -23,21 +23,19 @@ git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # 下载配置文件
-git clone https://git.arumx.com/zcsos/.dotfiles.git ~
-
-# 切换路径
-cd ~/.dotfiles
+git clone https://git.arumx.com/zcsos/.dotfiles.git
 
 # 复制配置文件
-cp .zshrc ~
+cp ~/.dotfiles/.zshrc ~
 
-cp .p10k.zsh ~
+cp ~/.dotfiles/.p10k.zsh ~
 
-cp .tmux.conf ~
+cp ~/.dotfiles/.tmux.conf ~
 
-cp -r .config ~
+cp -r .dotfiles/.config ~
 
 # 更新配置
 source ~/.zshrc
 source ~/.p10k.zsh
 
+exec zsh
