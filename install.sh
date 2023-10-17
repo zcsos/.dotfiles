@@ -37,11 +37,6 @@ cp -r ~/.dotfiles/.config ~
 # 删除.dotfiles
 rm -rf ~/.dotfiles/
 
-# 切换zsh
-chsh -s $(which zsh)
-
-exec zsh
-
 # 安装neovim
 git clone https://github.com/neovim/neovim.git
 
@@ -50,3 +45,12 @@ cd neovim
 make CMAKE_BUILD_TYPE=RelWithDebInfo
 
 make install
+
+cd ~
+
+rm -rf ~/neovim/
+
+# 切换zsh
+chsh -s $(which zsh)
+
+exec zsh
