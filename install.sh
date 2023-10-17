@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # 安装所需软件
 apt update
