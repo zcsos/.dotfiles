@@ -23,7 +23,7 @@ git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # 下载配置文件
-git clone https://git.arumx.com/zcsos/.dotfiles.git
+git clone https://github.com/zcsos/.dotfiles.git
 
 # 复制配置文件
 cp ~/.dotfiles/.zshrc ~
@@ -32,10 +32,13 @@ cp ~/.dotfiles/.p10k.zsh ~
 
 cp ~/.dotfiles/.tmux.conf ~
 
-cp -r .dotfiles/.config ~
+cp -r ~/.dotfiles/.config ~
 
 # 更新配置
-source ~/.zshrc
-source ~/.p10k.zsh
+source .zshrc
+
+source .p10k.zsh
 
 exec zsh
+
+rm -rf .dotfiles
