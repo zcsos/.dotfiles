@@ -35,12 +35,15 @@ cp ~/.dotfiles/.tmux.conf ~
 cp -r ~/.dotfiles/.config ~
 
 # 更新配置
-source .zshrc
+# source .zshrc
 
-source .p10k.zsh
+# source .p10k.zsh
 
+# 删除.dotfiles
+rm -rf ~/.dotfiles/
+
+# 切换zsh
 chsh -s $(which zsh)
 
 exec zsh
 
-rm -rf .dotfiles
