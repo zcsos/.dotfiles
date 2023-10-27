@@ -62,8 +62,11 @@ map('n', '<leader>tt', ':term<CR>', { desc = 'Open Terminal' })
 
 -- tabs
 map('n', '<leader>tn', '<cmd>tabnew<CR>', { desc = 'New tab' })
-map('n', '<leader>ct', '<cmd>tabclose<CR>', { desc = 'Close tab' })
+map('n', '<leader>tc', '<cmd>tabclose<CR>', { desc = 'Close tab' })
 map('n', '<leader>t<Tab>', '<cmd>tabnext<CR>', { desc = 'Switch tab' })
+
+-- cmp
+map('n', '<leader>ct', ':ToggleAutoComplete<CR>', { desc = 'Toggle AutoComplete' })
 
 -- which-key 
 local wk = require("which-key")

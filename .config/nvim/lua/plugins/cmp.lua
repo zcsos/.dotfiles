@@ -8,6 +8,17 @@ if not snip_status_ok then
   return
 end
 
+local cmp_enabled = true
+vim.api.nvim_create_user_command("ToggleAutoComplete", function()
+	if cmp_enabled then
+		require("cmp").setup.buffer({ enabled = false })
+		cmp_enabled = false
+	else
+		require("cmp").setup.buffer({ enabled = true })
+		cmp_enabled = true
+	end
+end, {})
+
 require("luasnip.loaders.from_vscode").lazy_load()
 
 local kind_icons = {
@@ -109,7 +120,6 @@ cmp.setup({
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
     { name = 'path' },
-    { name = 'treesitter' },
   }, {
     { name = 'buffer' },
   })
