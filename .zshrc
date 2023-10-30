@@ -124,6 +124,10 @@ alias ta="tmux attach -t "
 alias tna="tmux new -s DEF"
 alias taa="tmux attach -t DEF"
 alias ttd="tmuxifier s dev"
+alias ls="colorls"
+alias dku="docker compose up -d"
+alias dkd="docker compose down"
+alias dkl="docker compose logs -f" 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
