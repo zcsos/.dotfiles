@@ -2,7 +2,7 @@
 
 # 安装所需软件
 apt update
-echo "y" | apt install -y zsh tmux make cmake gettext g++ npm
+echo "y" | apt install -y zsh tmux make cmake gettext g++ npm bat btop
 
 # 安装oh-my-zsh
 echo "y" | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
